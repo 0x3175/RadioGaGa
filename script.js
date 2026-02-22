@@ -91,11 +91,17 @@ tsParticles.load("tsparticles", {
 
 //#region Radio
 var audio = document.getElementById("audio");
+// Replace below URL with a valid 'Radio Ga Ga' mp3 URL or local path
 var audioSrc =
-  "https://radiogaga-server.df.r.appspot.com/bruni/outputlist.m3u8";
-var hls = new Hls();
-hls.loadSource(audioSrc);
-hls.attachMedia(audio);
+  "./Radio Ga Ga.mp3";
+
+if (audioSrc.endsWith(".m3u8")) {
+  var hls = new Hls();
+  hls.loadSource(audioSrc);
+  hls.attachMedia(audio);
+} else {
+  audio.src = audioSrc;
+}
 var audioControl = document.getElementById("power");
 
 function playPause() {
@@ -103,6 +109,15 @@ function playPause() {
     audio.play();
   } else {
     audio.pause();
+  }
+}
+
+function resetSong() {
+  if (audio) {
+    audio.currentTime = 0;
+    if (audioControl.checked) {
+      audio.play();
+    }
   }
 }
 //#endregion

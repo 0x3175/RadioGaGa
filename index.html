@@ -6,6 +6,7 @@
   <title>Radio GaGa</title>
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 
+  <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
 </head>
@@ -14,15 +15,6 @@
   <div id="tsparticles"></div>
   <canvas class="fireworks"></canvas>
 
-
-  <input type="radio" name="nes-size" id="size1" checked>
-  <!-- <label for="size1" class="size1"></label>
-  <input type="radio" name="nes-size" id="size2">
-  <label for="size2" class="size2"></label>
-  <input type="radio" name="nes-size" id="size3">
-  <label for="size3" class="size3"></label>
-  <input type="radio" name="nes-size" id="size4">
-  <label for="size4" class="size4"></label> -->
 
   <div id="nes">
     <div class="nes-top">
@@ -40,7 +32,7 @@
     <div class="nes-bottom">
       <div class="power-box">
         <input type="checkbox" id="power" onchange="playPause()" />
-        <!-- <div class="reset"></div> -->
+        <div class="reset" onclick="resetSong()"></div>
         <label for="power" class="power"></label>
         <div class="light"></div>
       </div>
@@ -52,7 +44,7 @@
     </div>
   </div>
 
-  <audio loop id="audio"></audio>
+  <audio loop id="audio" src="./Radio Ga Ga.mp3"></audio>
 
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
