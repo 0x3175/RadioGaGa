@@ -91,17 +91,6 @@ tsParticles.load("tsparticles", {
 
 //#region Radio
 var audio = document.getElementById("audio");
-// Replace below URL with a valid 'Radio Ga Ga' mp3 URL or local path
-var audioSrc =
-  "./Radio Ga Ga.mp3";
-
-if (audioSrc.endsWith(".m3u8")) {
-  var hls = new Hls();
-  hls.loadSource(audioSrc);
-  hls.attachMedia(audio);
-} else {
-  audio.src = audioSrc;
-}
 var audioControl = document.getElementById("power");
 
 function playPause() {
@@ -181,7 +170,6 @@ function renderParticule(e) {
   for (var t = 0; t < e.animatables.length; t++) e.animatables[t].target.draw();
 }
 function animateParticules(e, t) {
-  // var a = createCircle(e, t);
   for (n = [], i = 0; i < numberOfParticules; i++) {
     n.push(createParticule(e, t));
   }
@@ -199,20 +187,6 @@ function animateParticules(e, t) {
     easing: "easeOutExpo",
     update: renderParticule,
   });
-  // .add({
-  //   targets: a,
-  //   radius: anime.random(80, 160),
-  //   lineWidth: 0,
-  //   alpha: {
-  //     value: 0,
-  //     easing: "linear",
-  //     duration: anime.random(600, 800),
-  //   },
-  //   duration: anime.random(1200, 1800),
-  //   easing: "easeOutExpo",
-  //   update: renderParticule,
-  //   offset: 0,
-  // });
 }
 function debounce(fn, delay) {
   var timer;

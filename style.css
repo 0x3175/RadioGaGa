@@ -34,10 +34,10 @@ canvas {
   pointer-events: none;
 }
 
-
+/* NES */
 
 #nes {
-  font-size: 16px;
+  font-size: 12px;
   width: 45em;
   height: 15em;
   margin: 0;
@@ -182,18 +182,6 @@ h1 {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cdc8c5', endColorstr='#e7e7e7', GradientType=0);
   box-shadow: 0.2em 0.05em 0.3em -0.1em rgba(0, 0, 0, 0.3);
 }
-
-/* .nes-top:hover .lid {
-	-webkit-transform: rotateX(55deg);
-	-moz-transform: rotateX(55deg);
-	-o-transform: rotateX(55deg);
-	-ms-transform: rotateX(55deg);
-	transform: rotateX(55deg);
-
-
-	-webkit-box-shadow: 0 3.1em 5.2em -2em rgba(0, 0, 0, 0.32);
-	box-shadow: 0 3.1em 5.2em -2em rgba(0, 0, 0, 0.32);
-} */
 
 .nes-top:before {
   content: "";
